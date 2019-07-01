@@ -23,7 +23,7 @@ public class SelectAll {
              //ps return un oggetto ResultSet;
              //Interfaccia metododel interf =
              ResultSet rs = ps.executeQuery(); //metodo di pepS per eseguire le querry
-
+             int columnCount = rs.getMetaData().getColumnCount(); ///lunghezza colonne
              List<Client> queryclients = new ArrayList<> (  );
              while (rs.next ())
              {
@@ -38,11 +38,8 @@ public class SelectAll {
                  //-------
              }
              return queryclients;
-
-
-
-
-         }catch (SecurityException | SQLException | IOException e){
+         }
+         catch (SecurityException | SQLException | IOException e){
              System.out.println ( "Queryfailed:  "+ e.getMessage () );
              return null;
          }

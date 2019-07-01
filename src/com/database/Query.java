@@ -105,7 +105,7 @@ public class Query {
 
      }
 ///-------------------------------------esDelete_id--------------------------------------------------------------------
-    //prevent whit prepared Statment ?
+    //prevent attacchi SQL injection with prepared Statment ?
      public void esDelete_id(int id) throws SQLException, IOException{
         String sql = "DELETE FROM  client WHERE id= ?";
 
